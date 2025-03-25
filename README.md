@@ -1,6 +1,6 @@
-# Project Title
+# Flask Project Title
 
-A brief description of what your project does and who it's for.
+A concise description of what your Flask app does and who it's for.
 
 ## Installation
 
@@ -8,21 +8,39 @@ A brief description of what your project does and who it's for.
     ```
     git clone <repository-url>
     ```
-2. Navigate to the project directory:
+2. Create a virtual environment:
     ```
-    cd <project-directory>
+    python -m venv venv
     ```
-3. Install the dependencies:
+3. Activate the virtual environment:
+    - On Windows:
+      ```
+      venv\Scripts\activate
+      ```
+    - On macOS/Linux:
+      ```
+      source venv/bin/activate
+      ```
+4. Install the dependencies:
     ```
-    npm install
+    pip install -r requirements.txt
     ```
 
 ## Usage
 
-Describe how to run the project, including any example commands or usage scenarios:
-```
-npm start
-```
+1. Set the Flask application environment variable:
+    - On Windows:
+      ```
+      set FLASK_APP=app.py
+      ```
+    - On macOS/Linux:
+      ```
+      export FLASK_APP=app.py
+      ```
+2. Run the Flask app:
+    ```
+    flask run
+    ```
 
 ## Contributing
 
