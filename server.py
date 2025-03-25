@@ -6,6 +6,10 @@ import numpy as np
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+
+load_dotenv()
+PORT = int(os.getenv("PORT", 5000))
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -87,4 +91,4 @@ def chat():
     return jsonify({"answer": answer})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=PORT, debug=True)
